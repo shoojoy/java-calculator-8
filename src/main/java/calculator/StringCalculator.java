@@ -32,6 +32,8 @@ public class StringCalculator {
         // 분리된 숫자토큰을 정수로 파싱해서 합산
         int total = 0;
         for (String token : tokens) {
+            //공백 제거
+            String t = token.trim();
             total += Integer.parseInt(token);
         }
         return total;

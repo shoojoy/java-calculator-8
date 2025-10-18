@@ -34,7 +34,21 @@ public class StringCalculator {
         for (String token : tokens) {
             //공백 제거
             String t = token.trim();
-            total += Integer.parseInt(token);
+            //예외 사항 처리
+            if (t.isEmpty()) {
+                throw new IllegalArgumentException();
+            }
+            final int n;
+
+            try {
+                n = Integer.parseInt(t);
+            } catch (NumberFormatException e) {
+                throw new IllegalArgumentException();
+            }
+            if (n < 0) {
+                throw new IllegalArgumentException();
+            }
+            total += n;
         }
         return total;
     }

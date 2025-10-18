@@ -12,5 +12,5 @@
 - [x] 토큰 → 정수 변환 (공백 제거)
 - [x] 음수/비숫자/빈 토큰 등 예외 상황 처리 → `IllegalArgumentException`
 - [x] 결과 출력: `결과 : <합>`
-- [ ] 입출력(`Application`)과 계산로직(`StringCalculator`) 분리
+- [x] 입출력(`Application`)과 계산로직(`StringCalculator`) 분리
 - [ ] 경계 케이스 정리/테스트: `""`, `"1,2:3"`, `"//;\n1;2;3"`, `"1,,2"`, `"1,-2"`, `"1,a"` 등

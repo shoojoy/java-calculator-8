@@ -8,6 +8,10 @@ public class StringCalculator {
         if (s == null || s.isBlank()) {
             return 0;
         }
+        if (s.contains("\\n")) {
+            s = s.replace("\\n", "\n");
+        }
+
         // 기본 구분자만 합산
         String[] tokens = splitByDefaultDelimiters(s);
         return sumTokens(tokens);
